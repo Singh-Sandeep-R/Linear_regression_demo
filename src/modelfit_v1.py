@@ -55,7 +55,7 @@ def modelfit(data,var_trans, target):
     print(model.summary2().tables[0])
 #     print(summary_df)
     char_after_model(y,y_pred)
-    return model.summary2().tables[0], summary_df
+    return model.summary2().tables[0], summary_df,model
 
 
 
