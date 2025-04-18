@@ -28,6 +28,11 @@ def vartransformation(df,impute_mv_cont,impute_mv_cat):
     data[var] = data[var].clip(lower= 692.18, upper =3123.4800000000023 )
     data[var+'__T'] = data[var].copy()
 
+    ##### TotalBsmtSF--------#######
+    var = 'TotalBsmtSF'
+    data[var] = data[var].clip(lower= 519.3000000000001, upper =2155.05 )
+    data[var+'__T'] = data[var].copy()
+
     ##### Fullbath ####
     var = 'FullBath'
     df_encoded = pd.get_dummies(data[var],prefix = var, dtype=int)

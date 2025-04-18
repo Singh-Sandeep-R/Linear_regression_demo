@@ -46,8 +46,10 @@ def modelfit(data,var_trans, target):
     
     # VIF calculation
     vif_data = pd.DataFrame()
-    vif_data["Variable"] = X.columns
-    vif_data["VIF"] = [variance_inflation_factor(X_const.values, i+1) for i in range(len(X.columns))]
+    vif_data["Variable"] = X_const.columns
+    vif_data["VIF"] = [variance_inflation_factor(X_const.values, i) for i in range(len(X_const.columns))]
+    # print(len([variance_inflation_factor(X_const.values, i) for i in range(len(X.columns))]))
+    # print([variance_inflation_factor(X_const.values, i) for i in range(len(X.columns))])
     summary_df['VIF'] = vif_data["VIF"].round(2)
     
     
