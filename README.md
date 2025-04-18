@@ -50,5 +50,7 @@ To create a modular and reusable pipeline for training a linear regression model
      - P-Value  
      - Contribution %  
      - VIF
+6. **Run the model fit with Normal Equation**
+7. **show how gradient descent work in Linear Regression**
 
 ---
